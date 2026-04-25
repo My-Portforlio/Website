@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>KingDavid Creatives | David Ayogu</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
 <style>
   *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
   :root {
@@ -16,16 +16,13 @@
     --border: rgba(201,168,76,0.2);
     --text: #d4c9a8; --text-muted: #8a97b0;
     --white: #ffffff;
-    --off: #f8f7f4;
-    --text-dk: #07112b;
-    --text-dk-muted: #5a6a88;
     --grad1: linear-gradient(135deg,#c9a84c,#e8c97a);
     --grad2: linear-gradient(135deg,#c9a84c,#0d1e45);
     --grad3: linear-gradient(135deg,#0d1e45,#c9a84c,#e8c97a);
   }
   html { scroll-behavior: smooth; }
-  body { font-family:'Outfit',sans-serif; background:var(--dark); color:var(--text); overflow-x:hidden; line-height:1.7; }
-  h1,h2,h3,h4 { font-family:'Cormorant Garamond',serif; line-height:1.15; }
+  body { font-family:'DM Sans',sans-serif; background:var(--dark); color:var(--text); overflow-x:hidden; line-height:1.7; }
+  h1,h2,h3,h4 { font-family:'Syne',sans-serif; line-height:1.15; }
   a { text-decoration:none; color:inherit; }
   img { display:block; width:100%; }
   ::-webkit-scrollbar { width:5px; }
@@ -36,7 +33,7 @@
 
   /* NAV */
   nav { position:fixed; top:0; left:0; right:0; z-index:100; padding:1.2rem 6vw; display:flex; align-items:center; justify-content:space-between; background:rgba(7,17,43,0.82); backdrop-filter:blur(18px); border-bottom:1px solid var(--card-border); transition:background 0.3s; }
-  .nav-logo { font-family:'Cormorant Garamond',serif; font-size:1.5rem; font-weight:700; background:var(--grad1); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+  .nav-logo { font-family:'Syne',sans-serif; font-size:1.35rem; font-weight:800; background:var(--grad1); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
   .nav-links { display:flex; gap:2rem; list-style:none; }
   .nav-links a { font-size:0.9rem; font-weight:500; color:var(--text-muted); transition:color 0.3s; position:relative; }
   .nav-links a::after { content:''; position:absolute; bottom:-4px; left:0; width:0; height:2px; background:var(--grad1); border-radius:2px; transition:width 0.3s; }
@@ -51,9 +48,8 @@
   section { position:relative; z-index:1; padding:7rem 6vw; }
   .section-label { display:flex; align-items:center; gap:8px; font-size:0.78rem; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:var(--gold); margin-bottom:0.75rem; }
   .section-label::before { content:''; width:22px; height:1px; background:var(--gold); }
-  .section-title { font-size:clamp(2rem,4vw,3rem); font-weight:700; color:var(--white); margin-bottom:1.25rem; }
+  .section-title { font-size:clamp(2rem,4vw,3rem); font-weight:800; color:var(--white); margin-bottom:1.25rem; }
   .section-title span { background:var(--grad1); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
-  .section-title.dk { color:var(--text-dk); }
   .reveal { opacity:0; transform:translateY(40px); transition:opacity 0.7s ease,transform 0.7s ease; }
   .reveal.visible { opacity:1; transform:none; }
 
@@ -65,15 +61,15 @@
   @keyframes breathe { 0%,100%{transform:scale(1);box-shadow:0 6px 25px rgba(201,168,76,0.35)} 50%{transform:scale(1.02);box-shadow:0 10px 32px rgba(201,168,76,0.55)} }
   @keyframes fadeIn { from{opacity:0;transform:translateY(10px)} to{opacity:1;transform:translateY(0)} }
 
-  /* ── HERO (dark) ── */
+  /* HERO */
   #hero { min-height:100vh; display:flex; align-items:center; justify-content:space-between; gap:3rem; padding-top:8rem; flex-wrap:wrap; background-image:linear-gradient(rgba(201,168,76,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(201,168,76,0.04) 1px,transparent 1px); background-size:60px 60px; }
   .hero-left { flex:1; min-width:300px; }
   .hero-badge { display:inline-flex; align-items:center; gap:0.5rem; background:var(--gold-light); border:1px solid var(--border); border-radius:20px; padding:0.45rem 1.1rem; font-size:0.82rem; font-weight:600; color:var(--gold); margin-bottom:1.5rem; animation:fadeUp 0.6s ease both; }
   .hero-badge span { width:8px; height:8px; border-radius:50%; background:#22c55e; animation:pulse 2s infinite; }
-  .hero-name { font-size:clamp(3rem,6vw,5.5rem); font-weight:700; color:var(--white); line-height:1.05; margin-bottom:0.5rem; animation:fadeUp 0.7s 0.1s ease both; }
+  .hero-name { font-size:clamp(3rem,6vw,5.5rem); font-weight:800; color:var(--white); line-height:1.05; margin-bottom:0.5rem; animation:fadeUp 0.7s 0.1s ease both; }
   .hero-name .grad { background:var(--grad3); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
   .hero-brand { font-size:1rem; font-weight:600; letter-spacing:0.25em; text-transform:uppercase; color:var(--gold); margin-bottom:1.25rem; animation:fadeUp 0.7s 0.15s ease both; }
-  .hero-roles { font-size:clamp(1.1rem,2vw,1.4rem); font-weight:500; color:var(--text); margin-bottom:1.25rem; min-height:2rem; animation:fadeUp 0.7s 0.2s ease both; }
+  .hero-roles { font-size:clamp(1.1rem,2vw,1.4rem); font-weight:600; color:var(--text); margin-bottom:1.25rem; min-height:2rem; animation:fadeUp 0.7s 0.2s ease both; }
   .typed-cursor { color:var(--gold); animation:blink 1s infinite; }
   .hero-sub { max-width:520px; color:var(--text-muted); font-size:1.05rem; margin-bottom:2.5rem; animation:fadeUp 0.7s 0.28s ease both; }
   .hero-btns { display:flex; gap:1rem; flex-wrap:wrap; animation:fadeUp 0.7s 0.36s ease both; }
@@ -91,96 +87,125 @@
   .hero-float-badge.b2 { top:2.5rem; right:-2.5rem; animation:float2 5s ease-in-out infinite; }
   .hero-float-badge .emoji { font-size:1.3rem; }
   .hero-stats { display:flex; gap:2.5rem; margin-top:2.5rem; flex-wrap:wrap; animation:fadeUp 0.7s 0.44s ease both; }
-  .hero-stat .num { font-family:'Cormorant Garamond',serif; font-size:2.2rem; font-weight:700; color:var(--white); }
+  .hero-stat .num { font-family:'Syne',sans-serif; font-size:2rem; font-weight:800; color:var(--white); }
   .hero-stat .num span { background:var(--grad1); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
   .hero-stat .lbl { font-size:0.8rem; color:var(--text-muted); font-weight:500; }
 
-  /* ── ABOUT (light) ── */
-  #about { background:var(--off); border-top:1px solid rgba(201,168,76,0.15); border-bottom:1px solid rgba(201,168,76,0.15); }
+  /* ABOUT */
+  #about { background:rgba(13,30,69,0.4); border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
   .about-grid { display:flex; gap:4rem; align-items:center; flex-wrap:wrap; margin-top:3rem; }
-  .about-img-wrap { flex:0 0 auto; width:clamp(240px,28vw,340px); height:clamp(300px,35vw,420px); border-radius:2rem; overflow:hidden; border:2px solid rgba(201,168,76,0.25); box-shadow:0 20px 60px rgba(10,35,66,0.1); position:relative; }
+  .about-img-wrap { flex:0 0 auto; width:clamp(240px,28vw,340px); height:clamp(300px,35vw,420px); border-radius:2rem; overflow:hidden; border:2px solid var(--border); box-shadow:0 20px 60px rgba(201,168,76,0.12); position:relative; }
   .about-img-wrap img { width:100%; height:100%; object-fit:cover; }
-  .about-img-placeholder { width:100%; height:100%; background:linear-gradient(135deg,rgba(201,168,76,0.08),rgba(200,200,200,0.15)); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:1rem; color:var(--text-dk-muted); font-size:0.85rem; text-align:center; padding:1rem; }
+  .about-img-placeholder { width:100%; height:100%; background:linear-gradient(135deg,rgba(201,168,76,0.1),rgba(13,30,69,0.5)); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:1rem; color:var(--text-muted); font-size:0.85rem; text-align:center; padding:1rem; }
   .about-img-placeholder code { font-size:0.75rem; background:rgba(201,168,76,0.1); padding:0.3rem 0.6rem; border-radius:6px; color:var(--gold); }
   .about-content { flex:1; min-width:280px; }
-  .about-content p { color:var(--text-dk-muted); margin-bottom:1.5rem; font-size:1.02rem; }
-  .about-content strong { color:var(--text-dk); }
+  .about-content p { color:var(--text-muted); margin-bottom:1.5rem; font-size:1.02rem; }
   .strengths-grid { display:flex; flex-wrap:wrap; gap:0.75rem; margin-top:1.5rem; }
-  .strength-tag { background:rgba(201,168,76,0.1); border:1px solid rgba(201,168,76,0.3); border-radius:20px; padding:0.45rem 1rem; font-size:0.82rem; font-weight:600; color:#7a5e20; transition:background 0.3s; }
-  .strength-tag:hover { background:rgba(201,168,76,0.22); }
+  .strength-tag { background:var(--gold-light); border:1px solid var(--border); border-radius:20px; padding:0.45rem 1rem; font-size:0.82rem; font-weight:600; color:var(--gold); transition:background 0.3s; }
+  .strength-tag:hover { background:rgba(201,168,76,0.25); }
+  .about-style { display:flex; gap:1.5rem; margin-top:1.75rem; flex-wrap:wrap; }
+  .style-pill { display:flex; align-items:center; gap:0.6rem; background:rgba(201,168,76,0.06); border:1px solid var(--border); border-radius:20px; padding:0.5rem 1rem; font-size:0.82rem; color:var(--gold2); }
   .social-platforms { display:flex; gap:1rem; flex-wrap:wrap; margin-top:1.5rem; }
-  .platform-pill { display:flex; align-items:center; gap:0.5rem; background:rgba(10,35,66,0.05); border:1px solid rgba(10,35,66,0.1); border-radius:20px; padding:0.4rem 1rem; font-size:0.8rem; color:var(--text-dk-muted); font-weight:500; }
+  .platform-pill { display:flex; align-items:center; gap:0.5rem; background:rgba(255,255,255,0.04); border:1px solid var(--border); border-radius:20px; padding:0.4rem 1rem; font-size:0.8rem; color:var(--text-muted); font-weight:500; }
   .platform-pill .dot { width:7px; height:7px; border-radius:50%; }
-  .dot-fb{background:#1877F2} .dot-ig{background:#E4405F} .dot-li{background:#0A66C2} .dot-tt{background:#555} .dot-web{background:var(--gold)}
+  .dot-fb{background:#1877F2} .dot-ig{background:#E4405F} .dot-li{background:#0A66C2} .dot-tt{background:#fff} .dot-web{background:var(--gold)}
 
-  /* ── SKILLS (dark) ── */
+  /* SKILLS */
   .skills-intro { max-width:680px; color:var(--text-muted); margin-bottom:3rem; font-size:1.02rem; }
   .skills-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(340px,1fr)); gap:1.5rem; }
   .skill-card { background:var(--card); border:1px solid var(--card-border); border-radius:1.25rem; padding:1.5rem 1.75rem; transition:transform 0.3s,border-color 0.3s; }
   .skill-card:hover { transform:translateY(-4px); border-color:rgba(201,168,76,0.45); }
   .skill-head { display:flex; justify-content:space-between; align-items:center; margin-bottom:0.85rem; }
-  .skill-name { font-family:'Cormorant Garamond',serif; font-weight:700; font-size:1rem; color:var(--white); }
-  .skill-pct { font-family:'Cormorant Garamond',serif; font-weight:700; font-size:1.05rem; background:var(--grad1); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+  .skill-name { font-family:'Syne',sans-serif; font-weight:700; font-size:0.95rem; color:var(--white); }
+  .skill-pct { font-family:'Syne',sans-serif; font-weight:800; font-size:1.05rem; background:var(--grad1); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
   .skill-bar { height:6px; background:rgba(255,255,255,0.07); border-radius:50px; overflow:hidden; }
   .skill-fill { height:100%; border-radius:50px; background:var(--grad1); width:0; transition:width 1.4s cubic-bezier(0.16,1,0.3,1); }
   .skill-card:nth-child(2n) .skill-fill { background:linear-gradient(135deg,#c9a84c,#162555); }
 
-  /* ── PORTFOLIO (light) ── */
-  #portfolio { background:var(--white); }
+  /* PORTFOLIO */
   .portfolio-tabs { display:flex; gap:0.5rem; margin-bottom:3rem; flex-wrap:wrap; }
-  .tab-btn { padding:0.65rem 1.75rem; border-radius:6px; font-weight:700; cursor:pointer; border:1.5px solid rgba(10,35,66,0.15); background:transparent; color:var(--text-dk-muted); transition:all 0.3s; font-family:'Cormorant Garamond',serif; font-size:1rem; }
+  .tab-btn { padding:0.65rem 1.75rem; border-radius:6px; font-weight:700; font-size:0.88rem; cursor:pointer; border:1.5px solid var(--border); background:transparent; color:var(--text-muted); transition:all 0.3s; font-family:'Syne',sans-serif; }
   .tab-btn.active,.tab-btn:hover { background:var(--grad1); color:var(--dark); border-color:transparent; box-shadow:0 4px 18px rgba(201,168,76,0.3); }
   .tab-pane { display:none; }
   .tab-pane.active { display:block; animation:fadeIn 0.4s ease; }
   .flyers-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:1.5rem; }
-  .flyer-card { background:var(--white); border:1px solid rgba(10,35,66,0.08); border-radius:1.5rem; overflow:hidden; transition:transform 0.3s,box-shadow 0.3s; box-shadow:0 2px 12px rgba(10,35,66,0.06); }
-  .flyer-card:hover { transform:translateY(-6px); box-shadow:0 20px 50px rgba(10,35,66,0.12); }
-  .flyer-img { width:100%; aspect-ratio:3/4; background:linear-gradient(135deg,rgba(201,168,76,0.08),rgba(200,200,200,0.15)); position:relative; overflow:hidden; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:0.5rem; color:var(--text-dk-muted); font-size:0.8rem; text-align:center; }
+  .flyer-card { background:var(--card); border:1px solid var(--card-border); border-radius:1.5rem; overflow:hidden; transition:transform 0.3s,box-shadow 0.3s; }
+  .flyer-card:hover { transform:translateY(-6px); box-shadow:0 20px 50px rgba(201,168,76,0.15); }
+  .flyer-img { width:100%; aspect-ratio:3/4; background:linear-gradient(135deg,rgba(201,168,76,0.08),rgba(13,30,69,0.5)); position:relative; overflow:hidden; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:0.5rem; color:var(--text-muted); font-size:0.8rem; text-align:center; }
   .flyer-img img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
-  .flyer-img .img-label { position:relative; z-index:1; background:rgba(7,17,43,0.78); border:1px solid var(--border); border-radius:8px; padding:0.35rem 0.7rem; font-size:0.72rem; color:var(--gold); }
+  .flyer-img .img-label { position:relative; z-index:1; background:rgba(7,17,43,0.8); border:1px solid var(--border); border-radius:8px; padding:0.35rem 0.7rem; font-size:0.72rem; color:var(--gold); }
   .flyer-img .img-icon { font-size:2.5rem; position:relative; z-index:1; }
   .flyer-info { padding:1.25rem; }
-  .flyer-info h4 { font-family:'Cormorant Garamond',serif; font-size:1.15rem; font-weight:700; color:var(--text-dk); margin-bottom:0.4rem; }
-  .flyer-info p { font-size:0.82rem; color:var(--text-dk-muted); }
-  .flyer-tag { display:inline-block; margin-top:0.6rem; background:rgba(201,168,76,0.1); border:1px solid rgba(201,168,76,0.25); border-radius:20px; padding:0.25rem 0.75rem; font-size:0.72rem; color:#7a5e20; font-weight:600; }
+  .flyer-info h4 { font-family:'Syne',sans-serif; font-size:1rem; font-weight:700; color:var(--white); margin-bottom:0.4rem; }
+  .flyer-info p { font-size:0.82rem; color:var(--text-muted); }
+  .flyer-tag { display:inline-block; margin-top:0.6rem; background:var(--gold-light); border:1px solid var(--border); border-radius:20px; padding:0.25rem 0.75rem; font-size:0.72rem; color:var(--gold); }
   .videos-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(320px,1fr)); gap:1.5rem; }
-  .video-card { background:var(--white); border:1px solid rgba(10,35,66,0.08); border-radius:1.5rem; overflow:hidden; transition:transform 0.3s,box-shadow 0.3s; box-shadow:0 2px 12px rgba(10,35,66,0.06); }
-  .video-card:hover { transform:translateY(-6px); box-shadow:0 20px 50px rgba(10,35,66,0.12); }
+  .video-card { background:var(--card); border:1px solid var(--card-border); border-radius:1.5rem; overflow:hidden; transition:transform 0.3s,box-shadow 0.3s; }
+  .video-card:hover { transform:translateY(-6px); box-shadow:0 20px 50px rgba(201,168,76,0.15); }
   .video-thumb { width:100%; aspect-ratio:16/9; background:linear-gradient(135deg,rgba(13,30,69,0.8),rgba(201,168,76,0.1)); position:relative; overflow:hidden; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:0.75rem; }
   .video-thumb video { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
   .video-thumb .play-btn { position:relative; z-index:1; width:56px; height:56px; border-radius:50%; background:var(--grad1); display:flex; align-items:center; justify-content:center; font-size:1.3rem; color:var(--dark); box-shadow:0 6px 25px rgba(201,168,76,0.4); }
   .video-thumb .vid-label { position:relative; z-index:1; background:rgba(7,17,43,0.8); border:1px solid var(--border); border-radius:8px; padding:0.35rem 0.7rem; font-size:0.72rem; color:var(--gold); }
   .video-info { padding:1.25rem; }
-  .video-info h4 { font-family:'Cormorant Garamond',serif; font-size:1.15rem; font-weight:700; color:var(--text-dk); margin-bottom:0.4rem; }
-  .video-info p { font-size:0.82rem; color:var(--text-dk-muted); margin-bottom:0.4rem; }
+  .video-info h4 { font-family:'Syne',sans-serif; font-size:1rem; font-weight:700; color:var(--white); margin-bottom:0.4rem; }
+  .video-info p { font-size:0.82rem; color:var(--text-muted); margin-bottom:0.4rem; }
   .video-info .vid-type { font-size:0.75rem; color:var(--gold); font-weight:600; }
   .websites-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(340px,1fr)); gap:1.5rem; }
-  .web-card { background:var(--white); border:1px solid rgba(10,35,66,0.08); border-radius:1.5rem; overflow:hidden; transition:transform 0.3s,box-shadow 0.3s; box-shadow:0 2px 12px rgba(10,35,66,0.06); }
-  .web-card:hover { transform:translateY(-6px); box-shadow:0 20px 50px rgba(10,35,66,0.1); }
+  .web-card { background:var(--card); border:1px solid var(--card-border); border-radius:1.5rem; overflow:hidden; transition:transform 0.3s,box-shadow 0.3s; }
+  .web-card:hover { transform:translateY(-6px); box-shadow:0 20px 50px rgba(201,168,76,0.12); }
   .web-preview { width:100%; height:200px; background:linear-gradient(135deg,rgba(201,168,76,0.07),rgba(13,30,69,0.6)); overflow:hidden; position:relative; }
   .web-preview iframe { width:170%; height:170%; border:none; transform:scale(0.6); transform-origin:top left; pointer-events:none; animation:autoScroll 12s linear infinite alternate; }
   @keyframes autoScroll { from{transform:scale(0.6) translateY(0)} to{transform:scale(0.6) translateY(-25%)} }
-  .web-preview .web-placeholder { position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:0.5rem; color:var(--text-dk-muted); font-size:0.8rem; text-align:center; }
+  .web-preview .web-placeholder { position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:0.5rem; color:var(--text-muted); font-size:0.8rem; text-align:center; }
   .web-preview .web-placeholder .link-label { background:rgba(7,17,43,0.8); border:1px solid var(--border); border-radius:8px; padding:0.35rem 0.7rem; font-size:0.7rem; color:var(--gold); font-family:monospace; }
   .web-info { padding:1.25rem; }
-  .web-info h4 { font-family:'Cormorant Garamond',serif; font-size:1.15rem; font-weight:700; color:var(--text-dk); margin-bottom:0.4rem; }
-  .web-info p { font-size:0.82rem; color:var(--text-dk-muted); margin-bottom:0.75rem; }
+  .web-info h4 { font-family:'Syne',sans-serif; font-size:1rem; font-weight:700; color:var(--white); margin-bottom:0.4rem; }
+  .web-info p { font-size:0.82rem; color:var(--text-muted); margin-bottom:0.75rem; }
   .web-meta { display:flex; gap:0.5rem; flex-wrap:wrap; margin-bottom:0.9rem; }
-  .web-meta span { font-size:0.72rem; color:#7a5e20; background:rgba(201,168,76,0.1); border:1px solid rgba(201,168,76,0.25); border-radius:20px; padding:0.2rem 0.65rem; font-weight:600; }
+  .web-meta span { font-size:0.72rem; color:var(--gold2); background:var(--gold-light); border:1px solid var(--border); border-radius:20px; padding:0.2rem 0.65rem; }
   .view-live { display:inline-flex; align-items:center; gap:0.5rem; color:var(--dark); font-size:0.82rem; font-weight:700; background:var(--grad1); padding:0.5rem 1.2rem; border-radius:6px; transition:transform 0.2s,box-shadow 0.2s; }
   .view-live:hover { transform:translateY(-2px); box-shadow:0 6px 20px rgba(201,168,76,0.35); }
 
-  /* ── SOCIAL MEDIA (dark) ── */
-  #social-media { position:relative; overflow:hidden; background:linear-gradient(180deg,var(--dark) 0%,rgba(13,30,69,0.6) 50%,var(--dark) 100%); border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
-  .sm-grid-bg { position:absolute; inset:0; pointer-events:none; background-image:linear-gradient(rgba(201,168,76,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(201,168,76,0.04) 1px,transparent 1px); background-size:50px 50px; }
+  /* ══════════════════════════════════════
+     SOCIAL MEDIA MANAGEMENT SECTION
+  ══════════════════════════════════════ */
+  #social-media {
+    position:relative; overflow:hidden;
+    background:linear-gradient(180deg,var(--dark) 0%,rgba(13,30,69,0.6) 50%,var(--dark) 100%);
+    border-top:1px solid var(--border); border-bottom:1px solid var(--border);
+  }
+  .sm-grid-bg {
+    position:absolute; inset:0; pointer-events:none;
+    background-image:linear-gradient(rgba(201,168,76,0.04) 1px,transparent 1px),
+      linear-gradient(90deg,rgba(201,168,76,0.04) 1px,transparent 1px);
+    background-size:50px 50px;
+  }
   .sm-orb { position:absolute; right:-8%; top:5%; width:480px; height:480px; border-radius:50%; background:radial-gradient(circle,rgba(201,168,76,0.06) 0%,transparent 70%); pointer-events:none; }
+
+  /* Client cards */
   .clients-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(320px,1fr)); gap:1.75rem; margin-top:3rem; }
-  .client-card { background:rgba(13,30,69,0.5); border:1px solid var(--border); border-radius:1.5rem; overflow:hidden; transition:transform 0.3s,box-shadow 0.3s; position:relative; }
+  .client-card {
+    background:rgba(13,30,69,0.5); border:1px solid var(--border);
+    border-radius:1.5rem; overflow:hidden;
+    transition:transform 0.3s,box-shadow 0.3s;
+    position:relative;
+  }
   .client-card:hover { transform:translateY(-6px); box-shadow:0 24px 60px rgba(201,168,76,0.12); }
-  .client-card-top { padding:1.5rem 1.5rem 1rem; border-bottom:1px solid var(--border); display:flex; align-items:center; gap:1rem; background:rgba(7,17,43,0.5); }
-  .client-profile { width:56px; height:56px; border-radius:50%; border:2px solid var(--border); overflow:hidden; flex-shrink:0; background:linear-gradient(135deg,rgba(201,168,76,0.2),rgba(13,30,69,0.8)); display:flex; align-items:center; justify-content:center; font-size:1.5rem; color:rgba(201,168,76,0.4); }
+  .client-card-top {
+    padding:1.5rem 1.5rem 1rem;
+    border-bottom:1px solid var(--border);
+    display:flex; align-items:center; gap:1rem;
+    background:rgba(7,17,43,0.5);
+  }
+  .client-profile {
+    width:56px; height:56px; border-radius:50%;
+    border:2px solid var(--border); overflow:hidden; flex-shrink:0;
+    background:linear-gradient(135deg,rgba(201,168,76,0.2),rgba(13,30,69,0.8));
+    display:flex; align-items:center; justify-content:center;
+    font-size:1.5rem; color:rgba(201,168,76,0.4);
+  }
   .client-profile img { width:100%; height:100%; object-fit:cover; }
-  .client-meta h3 { font-family:'Cormorant Garamond',serif; font-size:1rem; font-weight:700; color:var(--white); margin-bottom:0.2rem; }
+  .client-meta h3 { font-family:'Syne',sans-serif; font-size:0.95rem; font-weight:800; color:var(--white); margin-bottom:0.2rem; }
   .client-meta .location { font-size:0.75rem; color:var(--text-muted); margin-bottom:0.3rem; }
   .client-platforms { display:flex; gap:0.4rem; flex-wrap:wrap; }
   .plat-badge { font-size:0.65rem; font-weight:700; padding:0.18rem 0.55rem; border-radius:20px; }
@@ -188,25 +213,35 @@
   .plat-fb { background:rgba(24,119,242,0.15); color:#1877F2; border:1px solid rgba(24,119,242,0.3); }
   .plat-tt { background:rgba(255,255,255,0.08); color:#fff; border:1px solid rgba(255,255,255,0.2); }
   .plat-li { background:rgba(10,102,194,0.15); color:#0A66C2; border:1px solid rgba(10,102,194,0.3); }
+
+  /* Live dashboard inside card */
   .client-dashboard { padding:1.25rem 1.5rem; }
   .live-indicator { display:flex; align-items:center; gap:0.5rem; font-size:0.7rem; font-weight:700; color:#22c55e; text-transform:uppercase; letter-spacing:0.1em; margin-bottom:1rem; }
   .live-dot { width:7px; height:7px; border-radius:50%; background:#22c55e; animation:livePulse 1.5s ease-in-out infinite; }
   @keyframes livePulse { 0%,100%{box-shadow:0 0 0 0 rgba(34,197,94,0.5)} 50%{box-shadow:0 0 0 6px rgba(34,197,94,0)} }
+
+  /* Animated counters row */
   .counters-row { display:grid; grid-template-columns:1fr 1fr; gap:0.75rem; margin-bottom:1rem; }
   .counter-box { background:rgba(7,17,43,0.6); border:1px solid var(--border); border-radius:0.85rem; padding:0.85rem; text-align:center; }
-  .counter-num { font-family:'Cormorant Garamond',serif; font-size:1.6rem; font-weight:700; background:var(--grad1); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; display:block; line-height:1; }
+  .counter-num { font-family:'Syne',sans-serif; font-size:1.4rem; font-weight:800; background:var(--grad1); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; display:block; line-height:1; }
   .counter-lbl { font-size:0.68rem; color:var(--text-muted); margin-top:0.3rem; text-transform:uppercase; letter-spacing:0.06em; }
   .counter-trend { font-size:0.65rem; color:#22c55e; font-weight:600; margin-top:0.2rem; }
+
+  /* Engagement bar */
   .engagement-row { margin-bottom:1rem; }
   .eng-label { display:flex; justify-content:space-between; font-size:0.72rem; margin-bottom:0.4rem; }
   .eng-label span:first-child { color:var(--text-muted); }
   .eng-label span:last-child { color:var(--gold); font-weight:600; }
   .eng-bar { height:5px; background:rgba(255,255,255,0.07); border-radius:20px; overflow:hidden; }
   .eng-fill { height:100%; border-radius:20px; background:var(--grad1); transition:width 2s ease; }
+
+  /* Screenshot strip */
   .screenshots-strip { display:grid; grid-template-columns:repeat(3,1fr); gap:0.5rem; margin-bottom:1rem; }
   .scrn-thumb { aspect-ratio:1; border-radius:0.6rem; overflow:hidden; border:1px solid var(--border); background:linear-gradient(135deg,rgba(201,168,76,0.08),rgba(13,30,69,0.6)); display:flex; align-items:center; justify-content:center; font-size:1.5rem; color:rgba(201,168,76,0.25); position:relative; }
   .scrn-thumb img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
   .scrn-thumb .scrn-label { position:relative; z-index:1; font-size:0.55rem; color:var(--gold); text-align:center; padding:0.2rem; }
+
+  /* Live comment feed */
   .comment-feed { background:rgba(7,17,43,0.7); border:1px solid var(--border); border-radius:0.85rem; padding:0.85rem; height:100px; overflow:hidden; position:relative; }
   .comment-feed-title { font-size:0.65rem; color:var(--gold); font-weight:700; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:0.5rem; }
   .comments-scroll { position:absolute; left:0.85rem; right:0.85rem; bottom:0.6rem; display:flex; flex-direction:column; gap:0.35rem; }
@@ -215,59 +250,71 @@
   .comment-avatar { width:18px; height:18px; border-radius:50%; background:var(--grad1); flex-shrink:0; display:flex; align-items:center; justify-content:center; font-size:0.55rem; color:var(--dark); font-weight:700; }
   .comment-text { font-size:0.7rem; color:var(--text-muted); line-height:1.4; }
   .comment-text strong { color:var(--gold2); font-weight:600; }
+
+  /* Strategy tag */
   .strategy-tag { margin-top:0.75rem; background:var(--gold-light); border:1px solid var(--border); border-radius:0.65rem; padding:0.6rem 0.85rem; font-size:0.72rem; color:var(--gold2); font-style:italic; line-height:1.5; }
+
+  /* Floating emojis */
   .float-emojis { position:absolute; inset:0; pointer-events:none; overflow:hidden; }
   .float-emoji { position:absolute; font-size:1.2rem; animation:floatUp linear infinite; opacity:0; }
   @keyframes floatUp { 0%{transform:translateY(100%) scale(0.5);opacity:0} 10%{opacity:0.8} 80%{opacity:0.6} 100%{transform:translateY(-120%) scale(1);opacity:0} }
+
+  /* SECTION 2 — STRATEGY */
   .strategy-section { margin-top:5rem; }
   .strategy-inner { display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:start; }
-  .david-quote-card { background:rgba(13,30,69,0.6); border:1px solid var(--border); border-radius:1.5rem; padding:2.5rem; position:relative; overflow:hidden; }
-  .david-quote-card::before { content:'"'; position:absolute; top:-0.5rem; left:1.5rem; font-size:8rem; font-family:'Cormorant Garamond',serif; color:rgba(201,168,76,0.08); line-height:1; pointer-events:none; }
-  .david-quote-card .quote-text { font-family:'Cormorant Garamond',serif; font-size:1.2rem; color:var(--text); line-height:1.8; font-style:italic; margin-bottom:1.5rem; position:relative; z-index:1; }
+  .david-quote-card {
+    background:rgba(13,30,69,0.6); border:1px solid var(--border);
+    border-radius:1.5rem; padding:2.5rem;
+    position:relative; overflow:hidden;
+  }
+  .david-quote-card::before { content:'"'; position:absolute; top:-0.5rem; left:1.5rem; font-size:8rem; font-family:'Syne',sans-serif; color:rgba(201,168,76,0.08); line-height:1; pointer-events:none; }
+  .david-quote-card .quote-text { font-size:1.05rem; color:var(--text); line-height:1.8; font-style:italic; margin-bottom:1.5rem; position:relative; z-index:1; }
   .david-quote-card .quote-attr { display:flex; align-items:center; gap:1rem; }
   .quote-avatar { width:48px; height:48px; border-radius:50%; border:2px solid var(--border); overflow:hidden; background:linear-gradient(135deg,rgba(201,168,76,0.2),rgba(13,30,69,0.8)); display:flex; align-items:center; justify-content:center; font-size:1.3rem; }
   .quote-avatar img { width:100%; height:100%; object-fit:cover; }
-  .quote-name { font-family:'Cormorant Garamond',serif; font-weight:700; color:var(--white); font-size:1rem; }
+  .quote-name { font-family:'Syne',sans-serif; font-weight:800; color:var(--white); font-size:0.95rem; }
   .quote-title { font-size:0.75rem; color:var(--gold); }
   .strategy-pillars { display:flex; flex-direction:column; gap:1rem; }
   .pillar-item { background:rgba(13,30,69,0.5); border:1px solid var(--border); border-radius:1rem; padding:1.25rem 1.5rem; display:flex; gap:1rem; align-items:flex-start; transition:border-color 0.3s,transform 0.3s; }
   .pillar-item:hover { border-color:rgba(201,168,76,0.4); transform:translateX(6px); }
   .pillar-icon { width:40px; height:40px; border-radius:10px; background:var(--grad1); display:flex; align-items:center; justify-content:center; font-size:1.15rem; flex-shrink:0; }
-  .pillar-text h4 { font-family:'Cormorant Garamond',serif; font-size:1rem; font-weight:700; color:var(--white); margin-bottom:0.3rem; }
+  .pillar-text h4 { font-family:'Syne',sans-serif; font-size:0.9rem; font-weight:700; color:var(--white); margin-bottom:0.3rem; }
   .pillar-text p { font-size:0.8rem; color:var(--text-muted); line-height:1.6; }
+
+  /* TESTIMONIALS */
   .testimonials-row { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:1.25rem; margin-top:3rem; }
   .testi-card { background:rgba(13,30,69,0.5); border:1px solid var(--border); border-radius:1.25rem; padding:1.75rem; position:relative; transition:transform 0.3s,border-color 0.3s; }
   .testi-card:hover { transform:translateY(-4px); border-color:rgba(201,168,76,0.4); }
   .testi-stars { color:var(--gold); font-size:0.85rem; margin-bottom:0.75rem; letter-spacing:0.1em; }
   .testi-text { font-size:0.88rem; color:var(--text-muted); line-height:1.75; font-style:italic; margin-bottom:1.25rem; }
   .testi-author { display:flex; align-items:center; gap:0.85rem; }
-  .testi-avatar { width:42px; height:42px; border-radius:50%; background:var(--grad1); display:flex; align-items:center; justify-content:center; font-family:'Cormorant Garamond',serif; font-weight:700; font-size:0.9rem; color:var(--dark); flex-shrink:0; }
-  .testi-name { font-family:'Cormorant Garamond',serif; font-weight:700; font-size:1rem; color:var(--white); }
+  .testi-avatar { width:42px; height:42px; border-radius:50%; background:var(--grad1); display:flex; align-items:center; justify-content:center; font-family:'Syne',sans-serif; font-weight:800; font-size:0.9rem; color:var(--dark); flex-shrink:0; }
+  .testi-name { font-family:'Syne',sans-serif; font-weight:700; font-size:0.88rem; color:var(--white); }
   .testi-role { font-size:0.72rem; color:var(--gold); }
   .testi-live-badge { position:absolute; top:1.25rem; right:1.25rem; display:flex; align-items:center; gap:0.35rem; font-size:0.62rem; color:#22c55e; font-weight:700; text-transform:uppercase; letter-spacing:0.08em; }
   .testi-live-dot { width:5px; height:5px; border-radius:50%; background:#22c55e; animation:livePulse 1.5s ease-in-out infinite; }
 
-  /* ── EXPERIENCE (light) ── */
-  #experience { background:var(--off); border-top:1px solid rgba(201,168,76,0.15); border-bottom:1px solid rgba(201,168,76,0.15); }
+  /* EXPERIENCE */
+  #experience { background:rgba(13,30,69,0.3); border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
   .exp-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:1.25rem; margin-top:3rem; }
-  .exp-card { background:var(--white); border:1px solid rgba(10,35,66,0.08); border-radius:1.25rem; padding:1.5rem; display:flex; gap:1rem; align-items:flex-start; transition:transform 0.3s,box-shadow 0.3s; box-shadow:0 2px 12px rgba(10,35,66,0.05); }
-  .exp-card:hover { transform:translateY(-4px); box-shadow:0 16px 40px rgba(10,35,66,0.1); }
+  .exp-card { background:var(--card); border:1px solid var(--card-border); border-radius:1.25rem; padding:1.5rem; display:flex; gap:1rem; align-items:flex-start; transition:transform 0.3s,border-color 0.3s; }
+  .exp-card:hover { transform:translateY(-4px); border-color:rgba(201,168,76,0.45); }
   .exp-icon { width:46px; height:46px; border-radius:10px; flex-shrink:0; background:var(--grad1); display:flex; align-items:center; justify-content:center; font-size:1.3rem; }
   .exp-card:nth-child(2n) .exp-icon { background:linear-gradient(135deg,#c9a84c,#162555); }
   .exp-card:nth-child(3n) .exp-icon { background:linear-gradient(135deg,#0d1e45,#c9a84c); }
-  .exp-text h4 { font-family:'Cormorant Garamond',serif; font-size:1.05rem; font-weight:700; color:var(--text-dk); margin-bottom:0.4rem; }
-  .exp-text p { font-size:0.82rem; color:var(--text-dk-muted); }
+  .exp-text h4 { font-family:'Syne',sans-serif; font-size:0.95rem; font-weight:700; color:var(--white); margin-bottom:0.4rem; }
+  .exp-text p { font-size:0.82rem; color:var(--text-muted); }
 
-  /* ── PROCESS (dark) ── */
+  /* PROCESS */
   #process { background:rgba(7,17,43,0.6); border-top:1px solid var(--border); }
   .process-steps { display:flex; flex-direction:column; gap:0; margin-top:3rem; max-width:720px; }
   .process-step { display:flex; gap:1.5rem; padding-bottom:2.5rem; position:relative; }
   .process-step:not(:last-child)::before { content:''; position:absolute; left:20px; top:48px; bottom:0; width:2px; background:linear-gradient(to bottom,rgba(201,168,76,0.5),transparent); }
-  .step-num { flex-shrink:0; width:42px; height:42px; border-radius:50%; background:var(--grad1); display:flex; align-items:center; justify-content:center; font-family:'Cormorant Garamond',serif; font-weight:700; font-size:1rem; color:var(--dark); box-shadow:0 4px 16px rgba(201,168,76,0.35); }
-  .step-content h4 { font-family:'Cormorant Garamond',serif; font-size:1.1rem; font-weight:700; color:var(--white); margin-bottom:0.4rem; }
+  .step-num { flex-shrink:0; width:42px; height:42px; border-radius:50%; background:var(--grad1); display:flex; align-items:center; justify-content:center; font-family:'Syne',sans-serif; font-weight:800; font-size:0.9rem; color:var(--dark); box-shadow:0 4px 16px rgba(201,168,76,0.35); }
+  .step-content h4 { font-family:'Syne',sans-serif; font-size:1.05rem; font-weight:700; color:var(--white); margin-bottom:0.4rem; }
   .step-content p { font-size:0.88rem; color:var(--text-muted); }
 
-  /* ── CONTACT (dark) ── */
+  /* CONTACT */
   .contact-wrap { display:grid; grid-template-columns:1fr 1fr; gap:4rem; margin-top:3rem; align-items:center; }
   .contact-left p { color:var(--text-muted); font-size:1.05rem; margin-bottom:2rem; }
   .contact-cards { display:flex; flex-direction:column; gap:1rem; }
@@ -280,27 +327,27 @@
   .contact-card .c-label { font-size:0.72rem; color:var(--text-muted); font-weight:600; text-transform:uppercase; letter-spacing:0.08em; }
   .contact-card .c-val { font-size:0.95rem; color:var(--white); font-weight:600; }
   .contact-right { background:var(--card); border:1px solid var(--card-border); border-radius:1.75rem; padding:2.5rem; }
-  .contact-right h3 { font-family:'Cormorant Garamond',serif; font-size:1.75rem; font-weight:700; color:var(--white); margin-bottom:1.5rem; }
+  .contact-right h3 { font-family:'Syne',sans-serif; font-size:1.5rem; font-weight:800; color:var(--white); margin-bottom:1.5rem; }
   .form-group { margin-bottom:1.25rem; }
   .form-group label { display:block; font-size:0.8rem; font-weight:600; color:var(--text-muted); margin-bottom:0.5rem; text-transform:uppercase; letter-spacing:0.06em; }
-  .form-group input,.form-group textarea { width:100%; background:rgba(255,255,255,0.04); border:1px solid var(--card-border); border-radius:0.75rem; padding:0.85rem 1rem; color:var(--white); font-family:'Outfit',sans-serif; font-size:0.92rem; outline:none; transition:border-color 0.3s; resize:vertical; }
+  .form-group input,.form-group textarea { width:100%; background:rgba(255,255,255,0.04); border:1px solid var(--card-border); border-radius:0.75rem; padding:0.85rem 1rem; color:var(--white); font-family:'DM Sans',sans-serif; font-size:0.92rem; outline:none; transition:border-color 0.3s; resize:vertical; }
   .form-group input:focus,.form-group textarea:focus { border-color:rgba(201,168,76,0.6); }
   .form-group textarea { min-height:120px; }
-  .btn-submit { width:100%; padding:0.9rem; border-radius:6px; background:var(--grad1); color:var(--dark); font-weight:700; font-size:1rem; border:none; cursor:pointer; font-family:'Cormorant Garamond',serif; letter-spacing:0.03em; box-shadow:0 6px 25px rgba(201,168,76,0.35); transition:transform 0.2s; animation:breathe 3.2s ease-in-out infinite; }
+  .btn-submit { width:100%; padding:0.9rem; border-radius:6px; background:var(--grad1); color:var(--dark); font-weight:700; font-size:0.95rem; border:none; cursor:pointer; font-family:'Syne',sans-serif; box-shadow:0 6px 25px rgba(201,168,76,0.35); transition:transform 0.2s; animation:breathe 3.2s ease-in-out infinite; }
   .btn-submit:hover { opacity:0.88; }
 
-  /* ── FOOTER ── */
+  /* FOOTER */
   footer { position:relative; z-index:1; background:var(--dark2); border-top:1px solid var(--border); padding:3rem 6vw; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1.5rem; }
-  .footer-brand .logo { font-family:'Cormorant Garamond',serif; font-size:1.5rem; font-weight:700; background:var(--grad1); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; margin-bottom:0.3rem; }
+  .footer-brand .logo { font-family:'Syne',sans-serif; font-size:1.3rem; font-weight:800; background:var(--grad1); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; margin-bottom:0.3rem; }
   .footer-brand .name { font-size:0.85rem; color:var(--text-muted); }
-  .footer-tagline { font-family:'Cormorant Garamond',serif; font-size:1.2rem; font-weight:700; color:var(--text); text-align:center; }
+  .footer-tagline { font-family:'Syne',sans-serif; font-size:1.05rem; font-weight:700; color:var(--text); text-align:center; }
   .footer-tagline span { background:var(--grad1); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
   .footer-social { display:flex; gap:1rem; }
   .social-btn { width:42px; height:42px; border-radius:8px; background:var(--card); border:1px solid var(--card-border); display:flex; align-items:center; justify-content:center; font-size:1.1rem; text-decoration:none; transition:border-color 0.3s,background 0.3s,transform 0.2s; }
   .social-btn:hover { border-color:var(--gold); background:var(--gold-light); transform:translateY(-3px); }
   .footer-copy { width:100%; text-align:center; font-size:0.78rem; color:var(--text-muted); padding-top:1.5rem; border-top:1px solid var(--border); margin-top:1.5rem; }
 
-  /* ── RESPONSIVE ── */
+  /* RESPONSIVE */
   @media(max-width:900px){
     #hero{flex-direction:column-reverse;text-align:center;padding-top:8rem}
     .hero-btns,.hero-stats{justify-content:center}
@@ -372,25 +419,24 @@
   </div>
 </section>
 
-<!-- ABOUT (light) -->
+<!-- ABOUT -->
 <section id="about">
   <p class="section-label">Who I Am</p>
-  <h2 class="section-title dk">About <span>David Ayogu</span></h2>
+  <h2 class="section-title">About <span>David Ayogu</span></h2>
   <div class="about-grid reveal">
     <div class="about-img-wrap">
       <img src="img-abt-01.jpeg" alt="David Ayogu – About" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" style="display:block"/>
       <div class="about-img-placeholder" style="display:none"><div style="font-size:3rem">👤</div><div>Your Photo Here</div><code>img-abt-01.jpeg</code></div>
     </div>
     <div class="about-content">
-      <p>I am David Ayogu, a <strong>Social Media Manager, Graphic Designer, and Video Editor</strong> who helps brands grow through clear strategy and creative content. With a background in digital marketing/business psychology and skills in data analysis, I understand how people interact online and use that to improve engagement.</p>
-      <p>I've worked with over <strong>25 brands</strong>, creating designs, videos, and digital content that deliver real results. I also build responsive websites that improve brand visibility and user experience.</p>
+      <p>I am David Ayogu, a <strong style="color:var(--white)">Social Media Manager, Graphic Designer, and Video Editor</strong> who helps brands grow through clear strategy and creative content. With a background in digital marketing/business paychology and skills in data analysis, I understand how people interact online and use that to improve engagement.</p>
+      <p>I've worked with over <strong style="color:var(--white)">25 brands</strong>, creating designs, videos, and digital content that deliver real results. I also build responsive websites that improve brand visibility and user experience.</p>
       <div class="strengths-grid">
         <span class="strength-tag">📱 Social Media Management</span>
         <span class="strength-tag">📈 Digital Marketing</span>
         <span class="strength-tag">🎨 Graphic Design</span>
         <span class="strength-tag">🎬 Video Editing</span>
         <span class="strength-tag">📊 Data Analysis</span>
-      </div>
       <div class="social-platforms">
         <div class="platform-pill"><span class="dot dot-fb"></span>Facebook</div>
         <div class="platform-pill"><span class="dot dot-ig"></span>Instagram</div>
@@ -398,11 +444,8 @@
         <div class="platform-pill"><span class="dot dot-tt"></span>TikTok</div>
         <div class="platform-pill"><span class="dot dot-web"></span>Web Backend</div>
       </div>
-    </div>
-  </div>
 </section>
-
-<!-- SKILLS (dark) -->
+<!-- SKILLS -->
 <section id="skills">
   <p class="section-label">What I Do Best</p>
   <h2 class="section-title">Skills & <span>Proficiency</span></h2>
@@ -417,10 +460,10 @@
   </div>
 </section>
 
-<!-- PORTFOLIO (light) -->
+<!-- PORTFOLIO -->
 <section id="portfolio">
   <p class="section-label">My Work</p>
-  <h2 class="section-title dk">Creative <span>Portfolio</span></h2>
+  <h2 class="section-title">Creative <span>Portfolio</span></h2>
   <div class="portfolio-tabs reveal">
     <button class="tab-btn active" onclick="switchTab('flyers',this)">🖼 Flyers</button>
     <button class="tab-btn" onclick="switchTab('videos',this)">🎬 Videos</button>
@@ -452,143 +495,288 @@
   </div>
 </section>
 
-<!-- SOCIAL MEDIA (dark) -->
+<!-- ══════════════════════════════════════
+     SOCIAL MEDIA MANAGEMENT SECTION
+══════════════════════════════════════ -->
 <section id="social-media">
   <div class="sm-grid-bg"></div>
   <div class="sm-orb"></div>
+
   <p class="section-label">Proven Growth</p>
   <h2 class="section-title">Social Media <span>Management</span></h2>
   <p style="max-width:640px;color:var(--text-muted);font-size:1.02rem;margin-bottom:0.5rem;">Real pages. Real numbers. Real growth — built from under 500 followers to tens of thousands through strategy, consistency, and content that converts.</p>
+
+  <!-- CASE STUDIES GRID -->
   <div class="clients-grid">
+
+    <!-- CLIENT 1: African & Caribbean Foods -->
     <div class="client-card reveal" data-client="0">
       <div class="float-emojis" id="floats-0"></div>
       <div class="client-card-top">
-        <div class="client-profile"><img src="profile-01.jpeg" alt="Mighty Olu Grocery" onerror="this.style.display='none';this.parentElement.innerHTML='🛒'"/></div>
+        <div class="client-profile">
+          <img src="profile-01.jpeg" alt="Mighty Olu Grocery" onerror="this.style.display='none';this.parentElement.innerHTML='🛒'"/>
+        </div>
         <div class="client-meta">
           <h3>African and Caribbean food Store</h3>
           <div class="location">📍 Edinburgh, United Kingdom</div>
-          <div class="client-platforms"><span class="plat-badge plat-ig">Instagram</span><span class="plat-badge plat-fb">Facebook</span><span class="plat-badge plat-tt">TikTok</span></div>
+          <div class="client-platforms">
+            <span class="plat-badge plat-ig">Instagram</span>
+            <span class="plat-badge plat-fb">Facebook</span>
+            <span class="plat-badge plat-tt">TikTok</span>
+          </div>
         </div>
       </div>
       <div class="client-dashboard">
         <div class="live-indicator"><div class="live-dot"></div>Live Dashboard</div>
         <div class="counters-row">
-          <div class="counter-box"><span class="counter-num" id="c0-followers">0</span><div class="counter-lbl">Followers</div><div class="counter-trend">↑ From 320</div></div>
-          <div class="counter-box"><span class="counter-num" id="c0-likes">0</span><div class="counter-lbl">Avg. Likes/Post</div><div class="counter-trend">↑ From 87</div></div>
+          <div class="counter-box">
+            <span class="counter-num" id="c0-followers">0</span>
+            <div class="counter-lbl">Followers</div>
+            <div class="counter-trend">↑ From 320</div>
+          </div>
+          <div class="counter-box">
+            <span class="counter-num" id="c0-likes">0</span>
+            <div class="counter-lbl">Avg. Likes/Post</div>
+            <div class="counter-trend">↑ From 87</div>
+          </div>
         </div>
-        <div class="engagement-row"><div class="eng-label"><span>Engagement Rate</span><span>7.2% (was 0.9%)</span></div><div class="eng-bar"><div class="eng-fill" style="width:0" data-w="72"></div></div></div>
-        <div class="engagement-row"><div class="eng-label"><span>Monthly Reach</span><span>142,000 accounts</span></div><div class="eng-bar"><div class="eng-fill" style="width:0" data-w="88"></div></div></div>
+        <div class="engagement-row">
+          <div class="eng-label"><span>Engagement Rate</span><span>7.2% (was 0.9%)</span></div>
+          <div class="eng-bar"><div class="eng-fill" style="width:0" data-w="72"></div></div>
+        </div>
+        <div class="engagement-row">
+          <div class="eng-label"><span>Monthly Reach</span><span>142,000 accounts</span></div>
+          <div class="eng-bar"><div class="eng-fill" style="width:0" data-w="88"></div></div>
+        </div>
         <div class="screenshots-strip">
-          <div class="scrn-thumb"><img src="scrn-img-01.jpeg" alt="" onerror="this.style.display='none'"/><span class="scrn-label">Post Sample</span></div>
-          <div class="scrn-thumb"><img src="scrn-img-02.jpeg" alt="" onerror="this.style.display='none'"/><span class="scrn-label">Post Sample</span></div>
-          <div class="scrn-thumb"><img src="scrn-img-03.jpeg" alt="" onerror="this.style.display='none'"/><span class="scrn-label">Post Sample</span></div>
+          <div class="scrn-thumb"><img src="scrn-img-01.jpeg" alt="Post 1" onerror="this.style.display='none'"/><span class="scrn-label">Post Sample</span></div>
+          <div class="scrn-thumb"><img src="scrn-img-02.jpeg" alt="Post 2" onerror="this.style.display='none'"/><span class="scrn-label">Post Sample</span></div>
+          <div class="scrn-thumb"><img src="scrn-img-03.jpeg" alt="Post 3" onerror="this.style.display='none'"/><span class="scrn-label">Post Sample</span></div>
         </div>
-        <div class="comment-feed"><div class="comment-feed-title">💬 Live Comments</div><div class="comments-scroll" id="feed-0"></div></div>
+        <div class="comment-feed">
+          <div class="comment-feed-title">💬 Live Comments</div>
+          <div class="comments-scroll" id="feed-0"></div>
+        </div>
         <div class="strategy-tag">📌 Strategy: Daily food Reels + cultural content + weekend giveaways + community hashtags</div>
       </div>
     </div>
+
+    <!-- CLIENT 2: DPMI Church Chicago -->
     <div class="client-card reveal" data-client="1">
       <div class="float-emojis" id="floats-1"></div>
       <div class="client-card-top">
-        <div class="client-profile"><img src="profile-02.jpeg" alt="DPMI Church" onerror="this.style.display='none';this.parentElement.innerHTML='⛪'"/></div>
+        <div class="client-profile">
+          <img src="profile-02.jpeg" alt="DPMI Church" onerror="this.style.display='none';this.parentElement.innerHTML='⛪'"/>
+        </div>
         <div class="client-meta">
           <h3>Church and Christian Missionary society</h3>
           <div class="location">📍 Chicago, USA</div>
-          <div class="client-platforms"><span class="plat-badge plat-ig">Instagram</span><span class="plat-badge plat-fb">Facebook</span><span class="plat-badge plat-li">LinkedIn</span></div>
+          <div class="client-platforms">
+            <span class="plat-badge plat-ig">Instagram</span>
+            <span class="plat-badge plat-fb">Facebook</span>
+            <span class="plat-badge plat-li">LinkedIn</span>
+          </div>
         </div>
       </div>
       <div class="client-dashboard">
         <div class="live-indicator"><div class="live-dot"></div>Live Dashboard</div>
         <div class="counters-row">
-          <div class="counter-box"><span class="counter-num" id="c1-followers">0</span><div class="counter-lbl">Followers</div><div class="counter-trend">↑ From 410</div></div>
-          <div class="counter-box"><span class="counter-num" id="c1-likes">0</span><div class="counter-lbl">Avg. Likes/Post</div><div class="counter-trend">↑ From 94</div></div>
+          <div class="counter-box">
+            <span class="counter-num" id="c1-followers">0</span>
+            <div class="counter-lbl">Followers</div>
+            <div class="counter-trend">↑ From 410</div>
+          </div>
+          <div class="counter-box">
+            <span class="counter-num" id="c1-likes">0</span>
+            <div class="counter-lbl">Avg. Likes/Post</div>
+            <div class="counter-trend">↑ From 94</div>
+          </div>
         </div>
-        <div class="engagement-row"><div class="eng-label"><span>Engagement Rate</span><span>8.5% (was 1.1%)</span></div><div class="eng-bar"><div class="eng-fill" style="width:0" data-w="85"></div></div></div>
-        <div class="engagement-row"><div class="eng-label"><span>Monthly Reach</span><span>210,000 accounts</span></div><div class="eng-bar"><div class="eng-fill" style="width:0" data-w="92"></div></div></div>
+        <div class="engagement-row">
+          <div class="eng-label"><span>Engagement Rate</span><span>8.5% (was 1.1%)</span></div>
+          <div class="eng-bar"><div class="eng-fill" style="width:0" data-w="85"></div></div>
+        </div>
+        <div class="engagement-row">
+          <div class="eng-label"><span>Monthly Reach</span><span>210,000 accounts</span></div>
+          <div class="eng-bar"><div class="eng-fill" style="width:0" data-w="92"></div></div>
+        </div>
         <div class="screenshots-strip">
-          <div class="scrn-thumb"><img src="scrn-img-04.jpeg" alt="" onerror="this.style.display='none'"/><span class="scrn-label">Post Sample</span></div>
-          <div class="scrn-thumb"><img src="scrn-img-05.jpeg" alt="" onerror="this.style.display='none'"/><span class="scrn-label">Post Sample</span></div>
-          <div class="scrn-thumb"><img src="scrn-img-06.jpeg" alt="" onerror="this.style.display='none'"/><span class="scrn-label">Post Sample</span></div>
+          <div class="scrn-thumb"><img src="scrn-img-04.jpeg" alt="Post 1" onerror="this.style.display='none'"/><span class="scrn-label">Post Sample</span></div>
+          <div class="scrn-thumb"><img src="scrn-img-05.jpeg" alt="Post 2" onerror="this.style.display='none'"/><span class="scrn-label">Post Sample</span></div>
+          <div class="scrn-thumb"><img src="scrn-img-06.jpeg" alt="Post 3" onerror="this.style.display='none'"/><span class="scrn-label">Post Sample</span></div>
         </div>
-        <div class="comment-feed"><div class="comment-feed-title">💬 Live Comments</div><div class="comments-scroll" id="feed-1"></div></div>
+        <div class="comment-feed">
+          <div class="comment-feed-title">💬 Live Comments</div>
+          <div class="comments-scroll" id="feed-1"></div>
+        </div>
         <div class="strategy-tag">📌 Strategy: Weekly sermon clips + inspirational quotes + event coverage + prayer community engagement</div>
       </div>
     </div>
+
+    <!-- CLIENT 3: HP Authorized Store Abuja -->
     <div class="client-card reveal" data-client="2">
       <div class="float-emojis" id="floats-2"></div>
       <div class="client-card-top">
-        <div class="client-profile"><img src="profile-03.jpeg" alt="Networld Computers" onerror="this.style.display='none';this.parentElement.innerHTML='💻'"/></div>
+        <div class="client-profile">
+          <img src="profile-03.jpeg" alt="Networld Computers" onerror="this.style.display='none';this.parentElement.innerHTML='💻'"/>
+        </div>
         <div class="client-meta">
           <h3>Networld Computers</h3>
           <div class="location">📍 Abuja, Nigeria — HP Authorized Store</div>
-          <div class="client-platforms"><span class="plat-badge plat-ig">Instagram</span><span class="plat-badge plat-fb">Facebook</span><span class="plat-badge plat-li">LinkedIn</span></div>
+          <div class="client-platforms">
+            <span class="plat-badge plat-ig">Instagram</span>
+            <span class="plat-badge plat-fb">Facebook</span>
+            <span class="plat-badge plat-li">LinkedIn</span>
+          </div>
         </div>
       </div>
       <div class="client-dashboard">
         <div class="live-indicator"><div class="live-dot"></div>Live Dashboard</div>
         <div class="counters-row">
-          <div class="counter-box"><span class="counter-num" id="c2-followers">0</span><div class="counter-lbl">Followers</div><div class="counter-trend">↑ From 280</div></div>
-          <div class="counter-box"><span class="counter-num" id="c2-likes">0</span><div class="counter-lbl">Avg. Likes/Post</div><div class="counter-trend">↑ From 62</div></div>
+          <div class="counter-box">
+            <span class="counter-num" id="c2-followers">0</span>
+            <div class="counter-lbl">Followers</div>
+            <div class="counter-trend">↑ From 280</div>
+          </div>
+          <div class="counter-box">
+            <span class="counter-num" id="c2-likes">0</span>
+            <div class="counter-lbl">Avg. Likes/Post</div>
+            <div class="counter-trend">↑ From 62</div>
+          </div>
         </div>
-        <div class="engagement-row"><div class="eng-label"><span>Engagement Rate</span><span>6.8% (was 0.8%)</span></div><div class="eng-bar"><div class="eng-fill" style="width:0" data-w="68"></div></div></div>
-        <div class="engagement-row"><div class="eng-label"><span>Monthly Reach</span><span>178,000 accounts</span></div><div class="eng-bar"><div class="eng-fill" style="width:0" data-w="80"></div></div></div>
+        <div class="engagement-row">
+          <div class="eng-label"><span>Engagement Rate</span><span>6.8% (was 0.8%)</span></div>
+          <div class="eng-bar"><div class="eng-fill" style="width:0" data-w="68"></div></div>
+        </div>
+        <div class="engagement-row">
+          <div class="eng-label"><span>Monthly Reach</span><span>178,000 accounts</span></div>
+          <div class="eng-bar"><div class="eng-fill" style="width:0" data-w="80"></div></div>
+        </div>
         <div class="screenshots-strip">
-          <div class="scrn-thumb"><img src="scrn-img-07.jpeg" alt="" onerror="this.style.display='none'"/><span class="scrn-label">Post Sample</span></div>
-          <div class="scrn-thumb"><img src="scrn-img-08.jpeg" alt="" onerror="this.style.display='none'"/><span class="scrn-label">Post Sample</span></div>
-          <div class="scrn-thumb"><img src="scrn-img-09.jpeg" alt="" onerror="this.style.display='none'"/><span class="scrn-label">Post Sample</span></div>
+          <div class="scrn-thumb"><img src="scrn-img-07.jpeg" alt="Post 1" onerror="this.style.display='none'"/><span class="scrn-label">Post Sample</span></div>
+          <div class="scrn-thumb"><img src="scrn-img-08.jpeg" alt="Post 2" onerror="this.style.display='none'"/><span class="scrn-label">Post Sample</span></div>
+          <div class="scrn-thumb"><img src="scrn-img-09.jpeg" alt="Post 3" onerror="this.style.display='none'"/><span class="scrn-label">Post Sample</span></div>
         </div>
-        <div class="comment-feed"><div class="comment-feed-title">💬 Live Comments</div><div class="comments-scroll" id="feed-2"></div></div>
+        <div class="comment-feed">
+          <div class="comment-feed-title">💬 Live Comments</div>
+          <div class="comments-scroll" id="feed-2"></div>
+        </div>
         <div class="strategy-tag">📌 Strategy: Product unboxing Reels + tech tips + flash sales + B2B LinkedIn targeting</div>
       </div>
     </div>
+
+    <!-- CLIENT 4: Fashion Brand Jos -->
     <div class="client-card reveal" data-client="3">
       <div class="float-emojis" id="floats-3"></div>
       <div class="client-card-top">
-        <div class="client-profile"><img src="profile-04.jpeg" alt="Fashion Brand Jos" onerror="this.style.display='none';this.parentElement.innerHTML='👗'"/></div>
+        <div class="client-profile">
+          <img src="profile-04.jpeg" alt="Fashion Brand Jos" onerror="this.style.display='none';this.parentElement.innerHTML='👗'"/>
+        </div>
         <div class="client-meta">
           <h3>Fashion Brand</h3>
           <div class="location">📍 Jos, Nigeria</div>
-          <div class="client-platforms"><span class="plat-badge plat-ig">Instagram</span><span class="plat-badge plat-tt">TikTok</span><span class="plat-badge plat-fb">Facebook</span></div>
+          <div class="client-platforms">
+            <span class="plat-badge plat-ig">Instagram</span>
+            <span class="plat-badge plat-tt">TikTok</span>
+            <span class="plat-badge plat-fb">Facebook</span>
+          </div>
         </div>
       </div>
       <div class="client-dashboard">
         <div class="live-indicator"><div class="live-dot"></div>Live Dashboard</div>
         <div class="counters-row">
-          <div class="counter-box"><span class="counter-num" id="c3-followers">0</span><div class="counter-lbl">Followers</div><div class="counter-trend">↑ From 195</div></div>
-          <div class="counter-box"><span class="counter-num" id="c3-likes">0</span><div class="counter-lbl">Avg. Likes/Post</div><div class="counter-trend">↑ From 78</div></div>
+          <div class="counter-box">
+            <span class="counter-num" id="c3-followers">0</span>
+            <div class="counter-lbl">Followers</div>
+            <div class="counter-trend">↑ From 195</div>
+          </div>
+          <div class="counter-box">
+            <span class="counter-num" id="c3-likes">0</span>
+            <div class="counter-lbl">Avg. Likes/Post</div>
+            <div class="counter-trend">↑ From 78</div>
+          </div>
         </div>
-        <div class="engagement-row"><div class="eng-label"><span>Engagement Rate</span><span>9.1% (was 1.2%)</span></div><div class="eng-bar"><div class="eng-fill" style="width:0" data-w="91"></div></div></div>
-        <div class="engagement-row"><div class="eng-label"><span>Monthly Reach</span><span>260,000 accounts</span></div><div class="eng-bar"><div class="eng-fill" style="width:0" data-w="95"></div></div></div>
+        <div class="engagement-row">
+          <div class="eng-label"><span>Engagement Rate</span><span>9.1% (was 1.2%)</span></div>
+          <div class="eng-bar"><div class="eng-fill" style="width:0" data-w="91"></div></div>
+        </div>
+        <div class="engagement-row">
+          <div class="eng-label"><span>Monthly Reach</span><span>260,000 accounts</span></div>
+          <div class="eng-bar"><div class="eng-fill" style="width:0" data-w="95"></div></div>
+        </div>
         <div class="screenshots-strip">
-          <div class="scrn-thumb"><img src="scrn-img-10.jpeg" alt="" onerror="this.style.display='none'"/><span class="scrn-label">Post Sample</span></div>
-          <div class="scrn-thumb"><img src="scrn-img-11.jpeg" alt="" onerror="this.style.display='none'"/><span class="scrn-label">Post Sample</span></div>
-          <div class="scrn-thumb"><img src="scrn-img-12.jpeg" alt="" onerror="this.style.display='none'"/><span class="scrn-label">Post Sample</span></div>
+          <div class="scrn-thumb"><img src="scrn-img-10.jpeg" alt="Post 1" onerror="this.style.display='none'"/><span class="scrn-label">Post Sample</span></div>
+          <div class="scrn-thumb"><img src="scrn-img-11.jpeg" alt="Post 2" onerror="this.style.display='none'"/><span class="scrn-label">Post Sample</span></div>
+          <div class="scrn-thumb"><img src="scrn-img-12.jpeg" alt="Post 3" onerror="this.style.display='none'"/><span class="scrn-label">Post Sample</span></div>
         </div>
-        <div class="comment-feed"><div class="comment-feed-title">💬 Live Comments</div><div class="comments-scroll" id="feed-3"></div></div>
+        <div class="comment-feed">
+          <div class="comment-feed-title">💬 Live Comments</div>
+          <div class="comments-scroll" id="feed-3"></div>
+        </div>
         <div class="strategy-tag">📌 Strategy: Trending audio Reels + outfit styling content + influencer collabs + TikTok challenges</div>
       </div>
     </div>
-  </div>
 
-  <!-- STRATEGY -->
+  </div><!-- /clients-grid -->
+
+  <!-- STRATEGY & GROWTH APPROACH -->
   <div class="strategy-section reveal">
     <p class="section-label">My Approach</p>
     <h2 class="section-title">Strategy & <span>Growth Approach</span></h2>
     <div class="strategy-inner">
       <div class="david-quote-card">
         <p class="quote-text">"Growth isn't luck — it's strategy, consistency, and knowing exactly who you're talking to."</p>
-        <div style="font-size:0.92rem;color:var(--text-muted);line-height:1.8;margin-bottom:1.5rem;">As a professional social media manager, I focus on understanding the business first — its audience, positioning, and goals. I use data and performance insights to identify exactly who the target audience is and how they interact online.<br><br>From there, I build a strategy based on what's proven to work — using metrics, trends, and behaviour patterns to guide content and growth. Whether the goal is attracting a business audience, driving purchases, or increasing visibility, every decision is intentional and backed by analysis.<br><br>The goal is simple: reach the right people, with the right content, at the right time — and turn that attention into real growth.</div>
+        <div style="font-size:0.92rem;color:var(--text-muted);line-height:1.8;margin-bottom:1.5rem;">
+          As a professional social media manager, I focus on understanding the business first — its audience, positioning, and goals. I use data and performance insights to identify exactly who the target audience is and how they interact online.<br><br>
+          From there, I build a strategy based on what's proven to work — using metrics, trends, and behaviour patterns to guide content and growth. Whether the goal is attracting a business audience, driving purchases, or increasing visibility, every decision is intentional and backed by analysis.<br><br>
+          The goal is simple: reach the right people, with the right content, at the right time — and turn that attention into real growth.
+        </div>
         <div class="quote-attr">
-          <div class="quote-avatar"><img src="img-hero-01.jpeg" alt="David Ayogu" onerror="this.style.display='none';this.parentElement.innerHTML='DA'"/></div>
-          <div><div class="quote-name">David Ayogu</div><div class="quote-title">Social Media Manager & Brand Strategist</div></div>
+          <div class="quote-avatar">
+            <img src="img-hero-01.jpeg" alt="David Ayogu" onerror="this.style.display='none';this.parentElement.innerHTML='DA'"/>
+          </div>
+          <div>
+            <div class="quote-name">David Ayogu</div>
+            <div class="quote-title">Social Media Manager & Brand Strategist</div>
+          </div>
         </div>
       </div>
       <div class="strategy-pillars">
-        <div class="pillar-item"><div class="pillar-icon">🎯</div><div class="pillar-text"><h4>Audience-First Strategy</h4><p>Every decision starts with who we're speaking to. I research demographics, behaviours, and interests before creating a single piece of content.</p></div></div>
-        <div class="pillar-item"><div class="pillar-icon">📅</div><div class="pillar-text"><h4>Content Pillars & Calendars</h4><p>I build structured content systems — educational, promotional, behind-the-scenes, and trending — posted consistently at optimal times.</p></div></div>
-        <div class="pillar-item"><div class="pillar-icon">📈</div><div class="pillar-text"><h4>Data-Driven Optimisation</h4><p>I track every metric — reach, saves, shares, follower growth — and use that data to continuously improve what's working and cut what isn't.</p></div></div>
-        <div class="pillar-item"><div class="pillar-icon">🤝</div><div class="pillar-text"><h4>Community Engagement</h4><p>Growth isn't just about posting. I actively engage with comments, DMs, and the broader niche community to build loyal, converting audiences.</p></div></div>
-        <div class="pillar-item"><div class="pillar-icon">🔥</div><div class="pillar-text"><h4>Trending Content Leverage</h4><p>I stay ahead of trends — audio, formats, challenges — and adapt them to each brand's voice so they stay visible and relevant in fast-moving feeds.</p></div></div>
+        <div class="pillar-item">
+          <div class="pillar-icon">🎯</div>
+          <div class="pillar-text">
+            <h4>Audience-First Strategy</h4>
+            <p>Every decision starts with who we're speaking to. I research demographics, behaviours, and interests before creating a single piece of content.</p>
+          </div>
+        </div>
+        <div class="pillar-item">
+          <div class="pillar-icon">📅</div>
+          <div class="pillar-text">
+            <h4>Content Pillars & Calendars</h4>
+            <p>I build structured content systems — educational, promotional, behind-the-scenes, and trending — posted consistently at optimal times.</p>
+          </div>
+        </div>
+        <div class="pillar-item">
+          <div class="pillar-icon">📈</div>
+          <div class="pillar-text">
+            <h4>Data-Driven Optimisation</h4>
+            <p>I track every metric — reach, saves, shares, follower growth — and use that data to continuously improve what's working and cut what isn't.</p>
+          </div>
+        </div>
+        <div class="pillar-item">
+          <div class="pillar-icon">🤝</div>
+          <div class="pillar-text">
+            <h4>Community Engagement</h4>
+            <p>Growth isn't just about posting. I actively engage with comments, DMs, and the broader niche community to build loyal, converting audiences.</p>
+          </div>
+        </div>
+        <div class="pillar-item">
+          <div class="pillar-icon">🔥</div>
+          <div class="pillar-text">
+            <h4>Trending Content Leverage</h4>
+            <p>I stay ahead of trends — audio, formats, challenges — and adapt them to each brand's voice so they stay visible and relevant in fast-moving feeds.</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -598,32 +786,56 @@
     <p class="section-label">Client Words</p>
     <h2 class="section-title">What Clients <span>Say</span></h2>
     <div class="testimonials-row">
+
       <div class="testi-card">
         <div class="testi-live-badge"><div class="testi-live-dot"></div>Verified</div>
         <div class="testi-stars">★★★★★</div>
         <p class="testi-text">"David completely transformed our social media presence. Before him, our page was practically invisible — under 400 followers, barely any engagement. Within months he had us trending locally, our followers exploded to over 10,000, and customers started coming in saying they found us on Instagram. His content strategy for our African and Caribbean food store was spot on — he understood our culture and our customers better than we expected."</p>
-        <div class="testi-author"><div class="testi-avatar">PO</div><div><div class="testi-name">Precious</div><div class="testi-role">Lead Marketer, Mighty Olu Grocery — Edinburgh, UK</div></div></div>
+        <div class="testi-author">
+          <div class="testi-avatar">PO</div>
+          <div>
+            <div class="testi-name">Precious</div>
+            <div class="testi-role">Lead Marketer, Mighty Olu Grocery — Edinburgh, UK</div>
+          </div>
+        </div>
       </div>
+
       <div class="testi-card">
         <div class="testi-live-badge"><div class="testi-live-dot"></div>Verified</div>
         <div class="testi-stars">★★★★★</div>
         <p class="testi-text">"Working with David was one of the best decisions we made for our ministry's online outreach. He understood that we weren't just selling a product — we were building a community of faith. He created content that was spiritually uplifting, visually excellent, and consistently delivered. Our church grew from a few hundred followers to over 25,000 across platforms. The engagement on our sermon clips and prayer posts has been incredible."</p>
-        <div class="testi-author"><div class="testi-avatar">PS</div><div><div class="testi-name">Pastor Shola</div><div class="testi-role">Team Lead, DPMI Christian Missionary Society — Chicago, USA</div></div></div>
+        <div class="testi-author">
+          <div class="testi-avatar">PS</div>
+          <div>
+            <div class="testi-name">Pastor Shola</div>
+            <div class="testi-role">Team Lead, DPMI Christian Missionary Society — Chicago, USA</div>
+          </div>
+        </div>
       </div>
+
       <div class="testi-card">
         <div class="testi-live-badge"><div class="testi-live-dot"></div>Verified</div>
         <div class="testi-stars">★★★★★</div>
         <p class="testi-text">"David brought a level of professionalism and strategy to our social media that we had never seen before. As an HP Authorized store, we needed content that was both technical and appealing to everyday buyers. He nailed it. Our LinkedIn visibility shot up dramatically, our Instagram Reels consistently pulled thousands of views, and our online enquiries increased by over 60%. His data-driven approach meant we always knew what was working."</p>
-        <div class="testi-author"><div class="testi-avatar">PK</div><div><div class="testi-name">Paul Networld</div><div class="testi-role">MD, Networld Computers — Abuja, Nigeria</div></div></div>
+        <div class="testi-author">
+          <div class="testi-avatar">PK</div>
+          <div>
+            <div class="testi-name">Paul Networld</div>
+            <div class="testi-role">MD, Networld Computers — Abuja, Nigeria</div>
+          </div>
+        </div>
       </div>
+
     </div>
   </div>
-</section>
 
-<!-- EXPERIENCE (light) -->
+</section>
+<!-- END SOCIAL MEDIA SECTION -->
+
+<!-- EXPERIENCE -->
 <section id="experience">
   <p class="section-label">What I Bring</p>
-  <h2 class="section-title dk">Experience & <span>Value</span></h2>
+  <h2 class="section-title">Experience & <span>Value</span></h2>
   <div class="exp-grid">
     <div class="exp-card reveal"><div class="exp-icon">📱</div><div class="exp-text"><h4>Social Media Account Management</h4><p>Managed and optimized social media accounts across Facebook, Instagram, LinkedIn, TikTok for measurable brand growth.</p></div></div>
     <div class="exp-card reveal"><div class="exp-icon">🎨</div><div class="exp-text"><h4>Visual Content Creation</h4><p>Created engaging visual content — flyers, reels, branded graphics — that consistently improves audience interaction and brand recall.</p></div></div>
@@ -634,7 +846,7 @@
   </div>
 </section>
 
-<!-- PROCESS (dark) -->
+<!-- PROCESS -->
 <section id="process">
   <p class="section-label">How I Work</p>
   <h2 class="section-title">My Work <span>Process</span></h2>
@@ -647,7 +859,7 @@
   </div>
 </section>
 
-<!-- CONTACT (dark) -->
+<!-- CONTACT -->
 <section id="contact">
   <p class="section-label">Let's Connect</p>
   <h2 class="section-title">Let's Build Your <span>Brand</span></h2>
@@ -775,7 +987,11 @@ function handleFormSubmit(){
   setTimeout(()=>{btn.textContent='✅ Message Sent!';setTimeout(()=>btn.textContent='Send Message 🚀',3000);},1200);
 }
 
-/* ── SOCIAL MEDIA DASHBOARD ANIMATIONS ── */
+/* ══════════════════════════════════════
+   SOCIAL MEDIA DASHBOARD ANIMATIONS
+══════════════════════════════════════ */
+
+// Client data
 const clientData=[
   {followers:10000,likes:8500,feedId:'feed-0',floatId:'floats-0',followerId:'c0-followers',likesId:'c0-likes',
    comments:['Just discovered this shop! Love it 😍','The jollof rice packs are amazing!','Finally African food in Edinburgh 🙌','Best Caribbean store in the city!','My family orders weekly now ❤️','Tried the plantain chips — incredible!','This page always makes me hungry 😂','Great deals every weekend!','Love the vibe of this brand','5 stars from our whole household ⭐']},
@@ -787,15 +1003,17 @@ const clientData=[
    comments:['This outfit is everything! 😍','Where can I buy this? 🔥','Jos fashion is rising! 🙌','This brand is taking over!','The styling is always 10/10','I wore their piece to a wedding — got so many compliments','Best fashion page from Jos','That colour combo is stunning!','Outfit goals right there ❤️','The designs are so unique and beautiful!']}
 ];
 
+// Smooth counter animation
 function animateCounter(elId,target,duration,suffix){
   const el=document.getElementById(elId);
   if(!el)return;
   const start=performance.now();
+  const startVal=0;
   function step(now){
     const elapsed=now-start;
     const progress=Math.min(elapsed/duration,1);
     const ease=1-Math.pow(1-progress,4);
-    const val=Math.round(target*ease);
+    const val=Math.round(startVal+(target-startVal)*ease);
     el.textContent=val>=1000?(val/1000).toFixed(1)+'K':val+(suffix||'');
     if(progress<1)requestAnimationFrame(step);
     else el.textContent=target>=1000?(target/1000).toFixed(0)+'K':target+(suffix||'');
@@ -803,6 +1021,7 @@ function animateCounter(elId,target,duration,suffix){
   requestAnimationFrame(step);
 }
 
+// Live continuous counter tick (followers slowly increasing)
 function startLiveCounters(idx,data){
   let followers=data.followers;
   let likes=data.likes;
@@ -816,6 +1035,7 @@ function startLiveCounters(idx,data){
   },2800+idx*400);
 }
 
+// Comment feed rotation
 function startCommentFeed(feedId,comments){
   const container=document.getElementById(feedId);
   if(!container)return;
@@ -831,12 +1051,15 @@ function startCommentFeed(feedId,comments){
     const ini=initials[Math.floor(Math.random()*initials.length)];
     div.innerHTML=`<div class="comment-avatar">${ini}</div><div class="comment-text"><strong>${ini}:</strong> ${c}</div>`;
     container.appendChild(div);
+    // Keep max 3 comments visible
     while(container.children.length>3)container.removeChild(container.firstChild);
   }
+  // Initial comments
   for(let i=0;i<2;i++)setTimeout(()=>addComment(),i*600);
   setInterval(addComment,3000+Math.random()*1500);
 }
 
+// Floating emojis
 function startFloatingEmojis(floatId){
   const container=document.getElementById(floatId);
   if(!container)return;
@@ -856,6 +1079,7 @@ function startFloatingEmojis(floatId){
   setInterval(spawnEmoji,800+Math.random()*600);
 }
 
+// Engagement bars animation
 function animateEngBars(card){
   card.querySelectorAll('.eng-fill').forEach(bar=>{
     bar.style.width=bar.dataset.w+'%';
@@ -863,15 +1087,19 @@ function animateEngBars(card){
   });
 }
 
+// Intersection observer for client cards — triggers animations on scroll
 const cardObs=new IntersectionObserver((entries)=>{
   entries.forEach(entry=>{
     if(entry.isIntersecting){
       const card=entry.target;
       const idx=parseInt(card.dataset.client);
       const data=clientData[idx];
+      // Animate initial counters
       animateCounter(data.followerId,data.followers,2200);
       animateCounter(data.likesId,data.likes,2000);
+      // Animate bars
       animateEngBars(card);
+      // Start live systems
       setTimeout(()=>{
         startLiveCounters(idx,data);
         startCommentFeed(data.feedId,data.comments);
@@ -883,6 +1111,7 @@ const cardObs=new IntersectionObserver((entries)=>{
 },{threshold:0.25});
 
 document.querySelectorAll('.client-card').forEach(card=>cardObs.observe(card));
+
 </script>
 </body>
 </html>
